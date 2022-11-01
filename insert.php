@@ -3,6 +3,7 @@
     include_once('functions.php');
 
     $insertdata = new DB_con();
+    // $getuserdata = $insertdata->fetchdata();
 
     if(isset($_POST['insert'])){
         $username = $_POST['username'];
@@ -14,6 +15,15 @@
 
         $sql = $insertdata->insert($username, $password, $name, $surname, $email);
         
+        // while($row = mysqli_fetch_array($sql)){
+        //     while($col = mysqli_fetch_array($getuserdata)){
+        //         if(str_contains($sql['username'], $getuserdata['username'])){
+        //             echo "<script>alert('Your Username is already exist!');</script>";
+        //             echo "<script>window.location.href='index.php'</script>";
+        //         }
+        //     }
+        // }
+
         if($sql) {
             echo "<script>alert('Inserted Data Successfully!');</script>";
             echo "<script>window.location.href='index.php'</script>";
@@ -47,6 +57,7 @@
         <hr>
         <h1 class="mt-5">Insert Page</h1>
         <hr>
+
         <form action="" method="post">
             <div class="mb-3">
                 <label for="uesrname" class="form-label">Username</label>

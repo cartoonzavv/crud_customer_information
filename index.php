@@ -46,10 +46,11 @@
                         <td><?php echo $row['created_date']; ?></td>
                         <td><?php echo $row['update_date']; ?></td>
                         <td><a href="update.php?id=<?php echo $row['id']; ?>" class="btn btn-warning">Edit</a></td>
-                        <td><a href="delete.php?del=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a></td>
+                        <td><a href="delete.php?del=<?php echo $row['id']; ?>" class="btn btn-danger"
+                        onclick="return confirm('Delete customer data of <?php echo $row['name']; ?> ?')">Delete</a></td>
                     </tr>
                 <?php
-                }
+                    }
                 ?>
             </tbody>
         </table>
