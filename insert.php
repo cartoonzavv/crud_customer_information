@@ -43,7 +43,7 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.php" class="btn btn-primary mt-3"> Go back</a>
+        <a href="index.php" class="btn btn-primary mt-3">Go back</a>
         <hr>
         <h1 class="mt-5">Insert Page</h1>
         <hr>

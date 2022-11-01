@@ -27,17 +27,26 @@
             return $result;
         }
 
+        public function fetchonerecord($userid){
+            $result = mysqli_query($this->dbcon, "SELECT * FROM tbluser WHERE id = '$userid'");
+            return $result;
+        }
+
         public function update($username, $password, $name, $surname, $email, $userid){
             $result = mysqli_query($this->dbcon, "UPDATE tbluser SET 
                 username = '$username',
                 password = '$password',
                 name = '$name',
                 surname = '$surname',
-                email = '$email',
+                email = '$email' 
                 WHERE id = '$userid'
             ");
+            return $result;
+        }
+
+        public function delete($userid){
+            $deleterecord = mysqli_query($this->dbcon,"DELETE FROM tbluser id = '$userid");
+            return $deleterecord;
         }
     }
-
-
 ?>

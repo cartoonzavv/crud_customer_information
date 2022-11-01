@@ -14,8 +14,8 @@
         <a href="insert.php" class="btn btn-success mt-3">Go to Insert</a>
         <hr>
         <h1 class="mt-5">Information Page</h1>
-        <table id="mytable" class="table table-bordered tablee-striped">
-            <thead>
+        <table id="mytable" class="table table-bordered table-striped">
+            <thead  class="table-dark">
                 <th>#</th>
                 <th>Username</th>
                 <th>Password</th>
