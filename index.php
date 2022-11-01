@@ -11,6 +11,8 @@
 </head>
 <body>
     <div class="container">
+        <a href="insert.php" class="btn btn-success mt-3">Go to Insert</a>
+        <hr>
         <h1 class="mt-5">Information Page</h1>
         <table id="mytable" class="table table-bordered tablee-striped">
             <thead>
@@ -43,8 +45,8 @@
                         <td><?php echo $row['email']; ?></td>
                         <td><?php echo $row['created_date']; ?></td>
                         <td><?php echo $row['update_date']; ?></td>
-                        <td><a href="update.php?id=<?php echo $row['id']; ?>" class="btn btn-warning"></a>Edit</td>
-                        <td><a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger"></a>Delete</td>
+                        <td><a href="update.php?id=<?php echo $row['id']; ?>" class="btn btn-warning">Edit</a></td>
+                        <td><a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a></td>
                     </tr>
                 <?php
                 }

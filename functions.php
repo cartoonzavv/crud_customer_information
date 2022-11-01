@@ -26,6 +26,17 @@
             $result = mysqli_query($this->dbcon, "SELECT * FROM tbluser");
             return $result;
         }
+
+        public function update($username, $password, $name, $surname, $email, $userid){
+            $result = mysqli_query($this->dbcon, "UPDATE tbluser SET 
+                username = '$username',
+                password = '$password',
+                name = '$name',
+                surname = '$surname',
+                email = '$email',
+                WHERE id = '$userid'
+            ");
+        }
     }
 
 
